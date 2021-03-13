@@ -309,7 +309,7 @@ static void eoax_setup(struct net_device *dev)
 	eth_broadcast_addr(dev->broadcast);
 
 	dev->netdev_ops		= &eoax_netdev_ops;
-	dev->destructor		= free_netdev;
+	dev->priv_destructor	= free_netdev;
 }
 
 /*
